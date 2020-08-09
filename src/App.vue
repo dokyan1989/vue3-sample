@@ -1,14 +1,14 @@
 <template>
-  <MovieSeatBookingApp />
+  <CustomVideoPlayerApp />
 </template>
 
 <script>
-import MovieSeatBookingApp from './components/MovieSeatBookingApp/MovieSeatBookingApp.vue'
+import CustomVideoPlayerApp from './components/CustomVideoPlayerApp/CustomVideoPlayerApp.vue'
 
 export default {
   name: 'App',
   components: {
-    MovieSeatBookingApp,
+    CustomVideoPlayerApp,
   },
 }
 </script>
