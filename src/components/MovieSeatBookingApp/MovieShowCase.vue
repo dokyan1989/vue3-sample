@@ -1,0 +1,63 @@
+<template>
+  <ul class="showcase">
+    <li v-for="showcase in showcases" v-bind:key="showcase.id">
+      <div class="seat" v-bind:class="showcase.statusClass"></div>
+      <small>{{ showcase.name }}</small>
+    </li>
+  </ul>
+</template>
+
+<script>
+export default {
+  name: 'MovieShowCase',
+  data() {
+    return {
+      showcases: [
+        { id: 1, name: 'N/A', statusClass: '' },
+        { id: 2, name: 'Selected', statusClass: 'selected' },
+        { id: 3, name: 'Occupied', statusClass: 'occupied' },
+      ],
+    }
+  },
+}
+</script>
+
+<style scoped>
+.showcase {
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+}
+</style>
